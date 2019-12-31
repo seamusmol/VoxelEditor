@@ -1,0 +1,26 @@
+MaterialDef Solid Color {
+    MaterialParameters {
+		Texture2D CloudMap
+		Int X
+		Int Z
+		Int BufferSize
+		Int CloudMapSize
+    }
+	
+    Technique {
+        VertexShader GLSL130:   /assets/shaders/clouds.vert
+        FragmentShader GLSL130: /assets/shaders/clouds.frag
+		
+        WorldParameters {
+            WorldViewProjectionMatrix
+			WorldViewMatrix
+            ViewMatrix
+        }
+		
+		Defines
+		{
+			
+		}
+    }
+    
+}

@@ -1,0 +1,28 @@
+MaterialDef Solid Color {
+    MaterialParameters {
+        Vector4 Color
+		Texture2D ColorMap
+		Float IDX
+		Float IDZ
+		Float Distance
+		Float TexSize
+		Float TileSize
+    }
+	
+    Technique {
+        VertexShader GLSL130:   /assets/shaders/background.vert
+        FragmentShader GLSL130: /assets/shaders/background.frag
+		
+        WorldParameters {
+            WorldViewProjectionMatrix
+			WorldViewMatrix
+            ViewMatrix
+        }
+		
+		Defines
+		{
+			
+		}
+    }
+    
+}
